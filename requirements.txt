@@ -3,3 +3,4 @@ openai
 wikipedia
 pyttsx3
 pywhatkit
+PyAudio
