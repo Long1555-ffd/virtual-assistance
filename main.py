@@ -29,7 +29,7 @@ def take_command():
         with sr.Microphone() as source:
             print("Đang nghe...")
             voice = recognizer.listen(source)
-            command = recognizer.recognize_google(voice, language='vi-VN')
+            command = recognizer.recognize_google(voice, language='en-US')
             command = command.lower()
             if 'sarah' in command:
                 command = command.replace('hey sarah', '')
@@ -37,64 +37,64 @@ def take_command():
                 print(command)
                 return command
     except Exception as e:
-        print("Lỗi: " + str(e))
-        return "Không nghe rõ"
+        print(e)
+        return "Please repeat the command"
     return ""
 
 def turn_on_light():
     # Mô phỏng bật đèn
-    print("Đèn đã bật")
-    talk("Vâng thưa ông, tôi đang bật đèn")
+    print("Turn on the light")
+    talk("Turn on the light")
 
 def turn_off_light():
     # Mô phỏng tắt đèn
-    print("Đèn đã tắt")
-    talk("Tôi đang tắt đèn")
+    print("Turn off the light")
+    talk("Turn off the loght")
 
 def open_application(app_name):
     # Hàm để mở phần mềm
     if app_name == 'notepad':
         subprocess.run(['notepad.exe'])
-        talk("Đang mở Notepad")
+        talk("Opening Notepad")
     elif app_name == 'calculator':
         subprocess.run(['calc.exe'])
-        talk("Đang mở Máy tính")
+        talk("Opening the calculator")
     else:
-        talk("Xin lỗi, tôi không biết cách mở " + app_name)
+        talk("There is an error in opening" + app_name)
 
 def tell_time():
     now = datetime.now()
     current_time = now.strftime("%H:%M")
-    talk(f"Bây giờ là {current_time}")
-    print(f"Bây giờ là {current_time}")
+    talk(f"The current time is {current_time}")
+    print(f"The current time is {current_time}")
 
 def tell_date():
     now = datetime.now()
     current_date = now.strftime("%d/%m/%Y")
-    talk(f"Hôm nay là ngày {current_date}")
-    print(f"Hôm nay là ngày {current_date}")
+    talk(f"The data today is {current_date}")
+    print(f"The data today is {current_date}")
 
 def tell_day():
     now = datetime.now()
     day_of_week = now.strftime("%A")
-    talk(f"Hôm nay là {day_of_week}")
-    print(f"Hôm nay là {day_of_week}")
+    talk(f"Date of the week {day_of_week}")
+    print(f"Date of the week {day_of_week}")
 
 def get_specific_date_info(date_str):
     try:
-        if 'hôm qua' in date_str:
+        if 'yesterday' in date_str:
             date_obj = datetime.now() - timedelta(days=1)
-        elif 'ngày mai' in date_str:
+        elif 'tomorrow' in date_str:
             date_obj = datetime.now() + timedelta(days=1)
         else:
             date_obj = datetime.strptime(date_str, "%d/%m/%Y")
         
         day_of_week = date_obj.strftime("%A")
-        talk(f"Ngày {date_obj.strftime('%d/%m/%Y')} là {day_of_week}")
-        print(f"Ngày {date_obj.strftime('%d/%m/%Y')} là {day_of_week}")
+        talk(f" {date_obj.strftime('%d/%m/%Y')} {day_of_week}")
+        print(f" {date_obj.strftime('%d/%m/%Y')} {day_of_week}")
     except ValueError:
-        talk("Ngày không hợp lệ, vui lòng thử lại.")
-        print("Ngày không hợp lệ, vui lòng thử lại.")
+        talk("Invalid datetime, please try again")
+        print("Invalid datetime, please try again")
 
 def get_openai_response(prompt):
     try:
@@ -112,31 +112,31 @@ def run_sarah():
     command = take_command()
     if command:
         print(command)
-        if 'phát nhạc' in command:
-            song = command.replace('phát nhạc', '')
-            talk('Đang phát ' + song)
+        if 'play music' in command:
+            song = command.replace('play music', '')
+            talk('Playing the song' + song)
             pywhatkit.playonyt(song)
-        elif 'phát một bài nhạc ngẫu nhiên' in command:
-            talk('Đang phát nhạc ngẫu nhiên trên YouTube')
-            pywhatkit.playonyt('nhạc ngẫu nhiên')
-        elif 'nói cho tôi biết về' in command:
-            person = command.replace('nói cho tôi biết về', '')
+        elif 'Play a random song' in command:
+            talk('Playing a random song on youtube')
+            pywhatkit.playonyt('lofi chill')
+        elif 'tell me about' in command:
+            person = command.replace('tell me about', '')
             info = wikipedia.summary(person, sentences=1)
             talk(info)
-        elif 'bật đèn' in command:
+        elif 'turn on the light' in command:
             turn_on_light()
-        elif 'tắt đèn' in command:
-            talk("Vâng thưa ông, tôi sẽ tắt đèn trong 5 giây nữa")
+        elif 'turn off the light' in command:
+            talk("Yes, turning the light off")
             time.sleep(5)
             turn_off_light()
-        elif 'hãy mở phần mềm' in command:
-            app_name = command.replace('hãy mở phần mềm', '').strip()
+        elif 'open' in command:
+            app_name = command.replace('open', '').strip()
             open_application(app_name)
-        elif 'bây giờ là mấy giờ' in command:
+        elif 'The current time' in command:
             tell_time()
-        elif 'hôm nay là ngày mấy' in command:
+        elif 'What is the date today' in command:
             tell_date()
-        elif 'hôm nay là thứ mấy' in command:
+        elif 'date of the week' in command:
             tell_day()
         elif 'ngày' in command and 'là thứ mấy' in command:
             date_str = command.replace('ngày', '').replace('là thứ mấy', '').strip()
@@ -144,16 +144,16 @@ def run_sarah():
         elif 'ngày' in command and 'là ngày mấy' in command:
             date_str = command.replace('ngày', '').replace('là ngày mấy', '').strip()
             get_specific_date_info(date_str)
-        elif 'hôm qua là ngày mấy' in command:
-            get_specific_date_info('hôm qua')
-        elif 'ngày mai là ngày mấy' in command:
-            get_specific_date_info('ngày mai')
-        elif 'giúp tôi với' in command:
-            prompt = command.replace('giúp tôi với', '').strip()
+        elif 'what is the date yesterday' in command:
+            get_specific_date_info('yesterday')
+        elif 'what is the date tomorrow' in command:
+            get_specific_date_info('tomorrow')
+        elif 'help me with' in command:
+            prompt = command.replace('help me with', '').strip()
             response = get_openai_response(prompt)
             talk(response)
         else:
-            talk('Xin vui lòng nói lại lệnh.')
+            talk('try again with your command')
 
 # Lắng nghe liên tục
 while True:
