@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 import openai
 
 # Cấu hình OpenAI API
-openai.api_key = 'your-openai-api-key'
+# openai.api_key = 'your-openai-api-key'
 
 # Chuyển mã hóa console sang UTF-8
 os.system('chcp 65001')
