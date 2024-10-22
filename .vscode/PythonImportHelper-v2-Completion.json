@@ -1,0 +1,520 @@
+[
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoModelForCausalLM",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoModelForCausalLM",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoModelForCausalLM",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoModelForCausalLM",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "GenerationConfig",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoModelForCausalLM",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "speech_recognition",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "speech_recognition",
+        "description": "speech_recognition",
+        "detail": "speech_recognition",
+        "documentation": {}
+    },
+    {
+        "label": "pyttsx3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyttsx3",
+        "description": "pyttsx3",
+        "detail": "pyttsx3",
+        "documentation": {}
+    },
+    {
+        "label": "pywhatkit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pywhatkit",
+        "description": "pywhatkit",
+        "detail": "pywhatkit",
+        "documentation": {}
+    },
+    {
+        "label": "wikipedia",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "wikipedia",
+        "description": "wikipedia",
+        "detail": "wikipedia",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "openai",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "openai",
+        "description": "openai",
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "tokenizer",
+        "kind": 5,
+        "importPath": "model.bloom",
+        "description": "model.bloom",
+        "peekOfCode": "tokenizer = AutoTokenizer.from_pretrained(\"bigscience/bloom-7b1\")\nmodel = AutoModelForCausalLM.from_pretrained(\"bigscience/bloom-7b1\")\ninputs = tokenizer(\"How can I help you today?\", return_tensors=\"pt\")\noutputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.bloom",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "model.bloom",
+        "description": "model.bloom",
+        "peekOfCode": "model = AutoModelForCausalLM.from_pretrained(\"bigscience/bloom-7b1\")\ninputs = tokenizer(\"How can I help you today?\", return_tensors=\"pt\")\noutputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.bloom",
+        "documentation": {}
+    },
+    {
+        "label": "inputs",
+        "kind": 5,
+        "importPath": "model.bloom",
+        "description": "model.bloom",
+        "peekOfCode": "inputs = tokenizer(\"How can I help you today?\", return_tensors=\"pt\")\noutputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.bloom",
+        "documentation": {}
+    },
+    {
+        "label": "outputs",
+        "kind": 5,
+        "importPath": "model.bloom",
+        "description": "model.bloom",
+        "peekOfCode": "outputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.bloom",
+        "documentation": {}
+    },
+    {
+        "label": "tokenizer",
+        "kind": 5,
+        "importPath": "model.Falcon",
+        "description": "model.Falcon",
+        "peekOfCode": "tokenizer = AutoTokenizer.from_pretrained(\"tiiuae/falcon-40b\")\nmodel = AutoModelForCausalLM.from_pretrained(\"tiiuae/falcon-40b\")\ninputs = tokenizer(\"What can I assist you with today?\", return_tensors=\"pt\")\noutputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.Falcon",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "model.Falcon",
+        "description": "model.Falcon",
+        "peekOfCode": "model = AutoModelForCausalLM.from_pretrained(\"tiiuae/falcon-40b\")\ninputs = tokenizer(\"What can I assist you with today?\", return_tensors=\"pt\")\noutputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.Falcon",
+        "documentation": {}
+    },
+    {
+        "label": "inputs",
+        "kind": 5,
+        "importPath": "model.Falcon",
+        "description": "model.Falcon",
+        "peekOfCode": "inputs = tokenizer(\"What can I assist you with today?\", return_tensors=\"pt\")\noutputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.Falcon",
+        "documentation": {}
+    },
+    {
+        "label": "outputs",
+        "kind": 5,
+        "importPath": "model.Falcon",
+        "description": "model.Falcon",
+        "peekOfCode": "outputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.Falcon",
+        "documentation": {}
+    },
+    {
+        "label": "tokenizer",
+        "kind": 5,
+        "importPath": "model.llama",
+        "description": "model.llama",
+        "peekOfCode": "tokenizer = AutoTokenizer.from_pretrained(\"meta-llama/Llama-2-7b\")\nmodel = AutoModelForCausalLM.from_pretrained(\"meta-llama/Llama-2-7b\")\ninputs = tokenizer(\"How can I assist you today?\", return_tensors=\"pt\")\noutputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.llama",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "model.llama",
+        "description": "model.llama",
+        "peekOfCode": "model = AutoModelForCausalLM.from_pretrained(\"meta-llama/Llama-2-7b\")\ninputs = tokenizer(\"How can I assist you today?\", return_tensors=\"pt\")\noutputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.llama",
+        "documentation": {}
+    },
+    {
+        "label": "inputs",
+        "kind": 5,
+        "importPath": "model.llama",
+        "description": "model.llama",
+        "peekOfCode": "inputs = tokenizer(\"How can I assist you today?\", return_tensors=\"pt\")\noutputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.llama",
+        "documentation": {}
+    },
+    {
+        "label": "outputs",
+        "kind": 5,
+        "importPath": "model.llama",
+        "description": "model.llama",
+        "peekOfCode": "outputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.llama",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "model.mistral-7b",
+        "description": "model.mistral-7b",
+        "peekOfCode": "device = \"cuda\"\nmodel = AutoModelForCausalLM.from_pretrained(\"Open-Orca/Mistral-7B-OpenOrca\").to(device)\ntokenizer = AutoTokenizer.from_pretrained(\"Open-Orca/Mistral-7B-OpenOrca\")\ninputs = tokenizer(\"Who are you?\", return_tensors=\"pt\").to(device)\noutputs = model.generate(\n    **inputs, max_new_tokens=256, use_cache=True, do_sample=True,\n    temperature=0.2, top_p=0.95\n)\ntext = tokenizer.batch_decode(outputs)[0]\nprint(text)",
+        "detail": "model.mistral-7b",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "model.mistral-7b",
+        "description": "model.mistral-7b",
+        "peekOfCode": "model = AutoModelForCausalLM.from_pretrained(\"Open-Orca/Mistral-7B-OpenOrca\").to(device)\ntokenizer = AutoTokenizer.from_pretrained(\"Open-Orca/Mistral-7B-OpenOrca\")\ninputs = tokenizer(\"Who are you?\", return_tensors=\"pt\").to(device)\noutputs = model.generate(\n    **inputs, max_new_tokens=256, use_cache=True, do_sample=True,\n    temperature=0.2, top_p=0.95\n)\ntext = tokenizer.batch_decode(outputs)[0]\nprint(text)",
+        "detail": "model.mistral-7b",
+        "documentation": {}
+    },
+    {
+        "label": "tokenizer",
+        "kind": 5,
+        "importPath": "model.mistral-7b",
+        "description": "model.mistral-7b",
+        "peekOfCode": "tokenizer = AutoTokenizer.from_pretrained(\"Open-Orca/Mistral-7B-OpenOrca\")\ninputs = tokenizer(\"Who are you?\", return_tensors=\"pt\").to(device)\noutputs = model.generate(\n    **inputs, max_new_tokens=256, use_cache=True, do_sample=True,\n    temperature=0.2, top_p=0.95\n)\ntext = tokenizer.batch_decode(outputs)[0]\nprint(text)",
+        "detail": "model.mistral-7b",
+        "documentation": {}
+    },
+    {
+        "label": "inputs",
+        "kind": 5,
+        "importPath": "model.mistral-7b",
+        "description": "model.mistral-7b",
+        "peekOfCode": "inputs = tokenizer(\"Who are you?\", return_tensors=\"pt\").to(device)\noutputs = model.generate(\n    **inputs, max_new_tokens=256, use_cache=True, do_sample=True,\n    temperature=0.2, top_p=0.95\n)\ntext = tokenizer.batch_decode(outputs)[0]\nprint(text)",
+        "detail": "model.mistral-7b",
+        "documentation": {}
+    },
+    {
+        "label": "outputs",
+        "kind": 5,
+        "importPath": "model.mistral-7b",
+        "description": "model.mistral-7b",
+        "peekOfCode": "outputs = model.generate(\n    **inputs, max_new_tokens=256, use_cache=True, do_sample=True,\n    temperature=0.2, top_p=0.95\n)\ntext = tokenizer.batch_decode(outputs)[0]\nprint(text)",
+        "detail": "model.mistral-7b",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "kind": 5,
+        "importPath": "model.mistral-7b",
+        "description": "model.mistral-7b",
+        "peekOfCode": "text = tokenizer.batch_decode(outputs)[0]\nprint(text)",
+        "detail": "model.mistral-7b",
+        "documentation": {}
+    },
+    {
+        "label": "tokenizer",
+        "kind": 5,
+        "importPath": "model.NeoX",
+        "description": "model.NeoX",
+        "peekOfCode": "tokenizer = AutoTokenizer.from_pretrained(\"EleutherAI/gpt-neox-20b\")\nmodel = AutoModelForCausalLM.from_pretrained(\"EleutherAI/gpt-neox-20b\")\ninputs = tokenizer(\"Hello, how can I help you\", return_tensors=\"pt\")\noutputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.NeoX",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "model.NeoX",
+        "description": "model.NeoX",
+        "peekOfCode": "model = AutoModelForCausalLM.from_pretrained(\"EleutherAI/gpt-neox-20b\")\ninputs = tokenizer(\"Hello, how can I help you\", return_tensors=\"pt\")\noutputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.NeoX",
+        "documentation": {}
+    },
+    {
+        "label": "inputs",
+        "kind": 5,
+        "importPath": "model.NeoX",
+        "description": "model.NeoX",
+        "peekOfCode": "inputs = tokenizer(\"Hello, how can I help you\", return_tensors=\"pt\")\noutputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.NeoX",
+        "documentation": {}
+    },
+    {
+        "label": "outputs",
+        "kind": 5,
+        "importPath": "model.NeoX",
+        "description": "model.NeoX",
+        "peekOfCode": "outputs = model.generate(**inputs)\nprint(tokenizer.decode(outputs[0], skip_special_tokens=True))",
+        "detail": "model.NeoX",
+        "documentation": {}
+    },
+    {
+        "label": "talk",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def talk(text):\n    engine.say(text)\n    engine.runAndWait()\ndef take_command():\n    try:\n        with sr.Microphone() as source:\n            print(\"Đang nghe...\")\n            voice = recognizer.listen(source)\n            command = recognizer.recognize_google(voice, language='en-US')\n            command = command.lower()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "take_command",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def take_command():\n    try:\n        with sr.Microphone() as source:\n            print(\"Đang nghe...\")\n            voice = recognizer.listen(source)\n            command = recognizer.recognize_google(voice, language='en-US')\n            command = command.lower()\n            if 'sarah' in command:\n                command = command.replace('hey sarah', '')\n                command = command.replace('ok sarah', '')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "turn_on_light",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def turn_on_light():\n    # Mô phỏng bật đèn\n    print(\"Turn on the light\")\n    talk(\"Turn on the light\")\ndef turn_off_light():\n    # Mô phỏng tắt đèn\n    print(\"Turn off the light\")\n    talk(\"Turn off the loght\")\ndef open_application(app_name):\n    # Hàm để mở phần mềm",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "turn_off_light",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def turn_off_light():\n    # Mô phỏng tắt đèn\n    print(\"Turn off the light\")\n    talk(\"Turn off the loght\")\ndef open_application(app_name):\n    # Hàm để mở phần mềm\n    if app_name == 'notepad':\n        subprocess.run(['notepad.exe'])\n        talk(\"Opening Notepad\")\n    elif app_name == 'calculator':",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "open_application",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def open_application(app_name):\n    # Hàm để mở phần mềm\n    if app_name == 'notepad':\n        subprocess.run(['notepad.exe'])\n        talk(\"Opening Notepad\")\n    elif app_name == 'calculator':\n        subprocess.run(['calc.exe'])\n        talk(\"Opening the calculator\")\n    else:\n        talk(\"There is an error in opening\" + app_name)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "tell_time",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def tell_time():\n    now = datetime.now()\n    current_time = now.strftime(\"%H:%M\")\n    talk(f\"The current time is {current_time}\")\n    print(f\"The current time is {current_time}\")\ndef tell_date():\n    now = datetime.now()\n    current_date = now.strftime(\"%d/%m/%Y\")\n    talk(f\"The data today is {current_date}\")\n    print(f\"The data today is {current_date}\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "tell_date",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def tell_date():\n    now = datetime.now()\n    current_date = now.strftime(\"%d/%m/%Y\")\n    talk(f\"The data today is {current_date}\")\n    print(f\"The data today is {current_date}\")\ndef tell_day():\n    now = datetime.now()\n    day_of_week = now.strftime(\"%A\")\n    talk(f\"Date of the week {day_of_week}\")\n    print(f\"Date of the week {day_of_week}\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "tell_day",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def tell_day():\n    now = datetime.now()\n    day_of_week = now.strftime(\"%A\")\n    talk(f\"Date of the week {day_of_week}\")\n    print(f\"Date of the week {day_of_week}\")\ndef get_specific_date_info(date_str):\n    try:\n        if 'yesterday' in date_str:\n            date_obj = datetime.now() - timedelta(days=1)\n        elif 'tomorrow' in date_str:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_specific_date_info",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_specific_date_info(date_str):\n    try:\n        if 'yesterday' in date_str:\n            date_obj = datetime.now() - timedelta(days=1)\n        elif 'tomorrow' in date_str:\n            date_obj = datetime.now() + timedelta(days=1)\n        else:\n            date_obj = datetime.strptime(date_str, \"%d/%m/%Y\")\n        day_of_week = date_obj.strftime(\"%A\")\n        talk(f\" {date_obj.strftime('%d/%m/%Y')} {day_of_week}\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_openai_response",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_openai_response(prompt):\n    try:\n        response = openai.Completion.create(\n            engine=\"text-davinci-003\",\n            prompt=prompt,\n            max_tokens=150\n        )\n        return response.choices[0].text.strip()\n    except Exception as e:\n        print(\"Lỗi khi gọi OpenAI API: \" + str(e))",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "run_sarah",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def run_sarah():\n    command = take_command()\n    if command:\n        print(command)\n        if 'play music' in command:\n            song = command.replace('play music', '')\n            talk('Playing the song' + song)\n            pywhatkit.playonyt(song)\n        elif 'Play a random song' in command:\n            talk('Playing a random song on youtube')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "openai.api_key",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "openai.api_key = 'your-openai-api-key'\n# Chuyển mã hóa console sang UTF-8\nos.system('chcp 65001')\nsys.stdout.reconfigure(encoding='utf-8')\n# Khởi tạo recognizer và engine text-to-speech\nrecognizer = sr.Recognizer()\nengine = pyttsx3.init()\ndef talk(text):\n    engine.say(text)\n    engine.runAndWait()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "recognizer",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "recognizer = sr.Recognizer()\nengine = pyttsx3.init()\ndef talk(text):\n    engine.say(text)\n    engine.runAndWait()\ndef take_command():\n    try:\n        with sr.Microphone() as source:\n            print(\"Đang nghe...\")\n            voice = recognizer.listen(source)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "engine = pyttsx3.init()\ndef talk(text):\n    engine.say(text)\n    engine.runAndWait()\ndef take_command():\n    try:\n        with sr.Microphone() as source:\n            print(\"Đang nghe...\")\n            voice = recognizer.listen(source)\n            command = recognizer.recognize_google(voice, language='en-US')",
+        "detail": "main",
+        "documentation": {}
+    }
+]
