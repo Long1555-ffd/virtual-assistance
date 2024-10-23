@@ -14,5 +14,6 @@ try:
     )
     text = tokenizer.batch_decode(outputs)[0]
     print(text)
+    
 except Exception as e:
     print(f"An error occurred {e}")
