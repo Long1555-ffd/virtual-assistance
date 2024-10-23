@@ -4,6 +4,6 @@ wikipedia
 pyttsx3
 pywhatkit
 PyAudio
-tranformers
+transformers
 huggingface_hub
 torch
