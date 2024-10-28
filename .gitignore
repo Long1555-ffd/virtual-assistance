@@ -1,3 +1,5 @@
 .mypy_cache
 .vscode
 va
+gpt-2-medium
+gpt-2-model

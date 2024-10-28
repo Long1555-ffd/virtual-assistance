@@ -9,14 +9,15 @@ import time
 from datetime import datetime, timedelta
 import openai
 
-# Cấu hình OpenAI API
+# configure openai api
+# this is for running the LLMs on the cloud server
 # openai.api_key = 'your-openai-api-key'
 
-# Chuyển mã hóa console sang UTF-8
+# encoding the input into the utf-8 format
 os.system('chcp 65001')
 sys.stdout.reconfigure(encoding='utf-8')
 
-# Khởi tạo recognizer và engine text-to-speech
+# initialize text-to-speech engine
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
 
@@ -97,6 +98,7 @@ def get_specific_date_info(date_str):
         print("Invalid datetime, please try again")
 
 def get_openai_response(prompt):
+    """This function is for running the openai api on the cloud server, but it might not be necessary now"""
     try:
         response = openai.Completion.create(
             engine="text-davinci-003",
@@ -106,7 +108,7 @@ def get_openai_response(prompt):
         return response.choices[0].text.strip()
     except Exception as e:
         print("Lỗi khi gọi OpenAI API: " + str(e))
-        return "Có lỗi xảy ra khi truy vấn OpenAI API."
+        return "Errors when running inference with openai api"
 
 def run_sarah():
     command = take_command()
