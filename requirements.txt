@@ -6,4 +6,6 @@ pywhatkit
 PyAudio
 transformers
 huggingface_hub
-torch
+torch==24.2
+accelerators
+bitsandbytes
