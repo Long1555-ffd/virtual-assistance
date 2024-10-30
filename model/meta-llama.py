@@ -1,6 +1,6 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
-
+import os
 # Model name and local directory
 model_name = "facebook/opt-2.7b"
 local_dir = "./opt-2.7B/models--facebook--opt-2.7b/snapshots/905a4b602cda5c501f1b3a2650a4152680238254"
@@ -12,13 +12,22 @@ else:
     print("CUDA is not available. Using CPU.")
 
 # Load the tokenizer and model from the local directory
-try:
+# try:
+#     tokenizer = AutoTokenizer.from_pretrained(local_dir)
+#     model = AutoModelForCausalLM.from_pretrained(local_dir)
+#     print("Model and tokenizer loaded successfully.")
+# except Exception as e:
+#     print(f"Error loading model/tokenizer: {e}")
+#     exit()
+
+if os.path.isdir(local_dir):
+    print("Loading the model from the local directory")
     tokenizer = AutoTokenizer.from_pretrained(local_dir)
     model = AutoModelForCausalLM.from_pretrained(local_dir)
-    print("Model and tokenizer loaded successfully.")
-except Exception as e:
-    print(f"Error loading model/tokenizer: {e}")
-    exit()
+else:
+    print("Downloading the model from hugging face")
+    tokenizer = AutoTokenizer.from_pretrained(model_name, cache_dir="./opt-2.7B")
+    model = AutoModelForCausalLM.from_pretrained(model_name, cache_dir="./opt-2.7B")
 
 # Move the model to GPU if available
 device = "cuda" if torch.cuda.is_available() else "cpu"

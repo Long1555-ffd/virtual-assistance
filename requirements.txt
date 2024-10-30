@@ -6,6 +6,5 @@ pywhatkit
 PyAudio
 transformers
 huggingface_hub
-torch
-accelerators
+torch --index-url https://download.pytorch.org/whl/cu116
 bitsandbytes
