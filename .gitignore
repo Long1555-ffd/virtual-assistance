@@ -1,0 +1,9 @@
+.mypy_cache
+.vscode/
+va/
+gpt-2-medium/
+gpt-2-model/
+gpt-j-6b/
+gpt-neo-1.3B/
+opt-2.7B/
+large-gpt-2/
