@@ -6,5 +6,5 @@ pywhatkit
 PyAudio
 transformers
 huggingface_hub
-accelerator
+accelerate
 bitsandbytes
