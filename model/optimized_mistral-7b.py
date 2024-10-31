@@ -1,4 +1,5 @@
 import torch
+import os
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from optimum.onnxruntime import ORTModelForCausalLM
 from optimum.onnxruntime.configuration import AutoQuantizationConfig
@@ -17,10 +18,12 @@ onnx_path = "./mistral-7b.onnx"
 model = AutoModelForCausalLM.from_pretrained(model_name, cache_dir=cache_dir)
 
 # export the model into the onnx format
+onnx_dir = "./onnx_models"
+os.makedirs(onnx_dir, exist_ok=True)  # Create directory if it doesn't exist
 export_models(
     model=model,
-    output_dir=onnx_path,
-    opset=12,  # Onnx opset version (should be 12 or higher recommendation)
+    output_dir=onnx_dir,  # Change this to a directory
+    opset=12,
     cache_dir=cache_dir
 )
 
@@ -44,8 +47,9 @@ providers = ["CUDAExecutionProvider", "CPUExecutionProvider"]
 session_options = ort.SessionOptions()
 ort_session = ort.InferenceSession(quantized_model_path, providers=providers, sess_options=session_options)
 
-def generate_text(prompt, max_length = 100):
-    inputs = tokenizer(prompt, return_tensor="pt")
+def generate_text(prompt, max_length=100):
+    print(f"Generating text for prompt: '{prompt}'")
+    inputs = tokenizer(prompt, return_tensors="pt")
     input_ids = inputs.input_ids.numpy()  # convert to numpy for onnx compatibility
 
     onnx_inputs = {"input_ids": input_ids}
@@ -54,7 +58,12 @@ def generate_text(prompt, max_length = 100):
     outputs = ort_session.run(None, onnx_inputs)
     generated_ids = outputs[0]
 
+    print(f"Generated IDs: {generated_ids}")
     return tokenizer.decode(generated_ids[0], skip_special_tokens=True)
 
 prompt = "The future of AI research is"
-print(generate_text(prompt))
+try: 
+    generate_text(prompt)
+except Exception as e:
+    print(e)
+    
