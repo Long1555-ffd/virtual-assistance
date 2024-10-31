@@ -2,7 +2,6 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 # Step 1: Load the GPT-2 Medium model and tokenizer
 model_name = "gpt2-medium"
-
 tokenizer = GPT2Tokenizer.from_pretrained(model_name, cache_dir='./gpt-2-medium')
 model = GPT2LMHeadModel.from_pretrained(model_name, cache_dir='./gpt-2-medium')
 
