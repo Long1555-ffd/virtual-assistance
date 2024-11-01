@@ -1,9 +1,16 @@
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
+import os 
 
 model = "gpt2-large"
+local_dir = "./large-gpt-2/models--gpt2-large/snapshots/32b71b12589c2f8d625668d2335a01cac3249519"
 
-tokenizer = GPT2Tokenizer.from_pretrained(model, cache_dir="./large-gpt2")
-model = GPT2LMHeadModel.from_pretrained(model, cache_dir="./large-gpt2")
+if os.path.isdir():
+    tokenizer = GPT2Tokenizer.from_pretrained(local_dir)
+    model = GPT2LMHeadModel.from_pretrained(local_dir)
+else:
+    tokenizer = GPT2Tokenizer.from_pretrained(model, cache_dir="./large-gpt-2")
+    model = GPT2LMHeadModel.from_pretrained(model, cache_dir="./large-gpt-2")
+
 
 input_text = "The possibilities of artificial intelligence are endless,"
 inputs = tokenizer(input_text, return_tensors="pt")
