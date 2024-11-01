@@ -6,4 +6,8 @@ gpt-2-model/
 gpt-j-6b/
 gpt-neo-1.3B/
 opt-2.7B/
+myenv/
 large-gpt-2/
+offload/
+optimized-opt-2.7B-8bit/
+model-mistral-cache/
