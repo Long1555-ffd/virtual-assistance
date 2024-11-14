@@ -1,5 +1,5 @@
-from fairseq.checkpoint_utils import load_model_ensemble_and_task_from_hf_hub
-from fairseq.models.text_to_speech.hub_interface import TTSHubInterface
+from fairseq.fairseq.checkpoint_utils import load_model_ensemble_and_task_from_hf_hub
+from fairseq.fairseq.models.text_to_speech.hub_interface import TTSHubInterface
 import torch
 import IPython.display as ipd
 
