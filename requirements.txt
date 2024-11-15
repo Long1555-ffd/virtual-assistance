@@ -10,5 +10,4 @@ accelerate
 bitsandbytes
 optimum[exporters,onnxruntime]
 onnxruntime
-fairseq
 IPython
