@@ -1,6 +1,7 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 import os
+
 # Model name and local directory
 model_name = "facebook/opt-2.7b"
 local_dir = "./opt-2.7B/models--facebook--opt-2.7b/snapshots/905a4b602cda5c501f1b3a2650a4152680238254"
@@ -12,20 +13,13 @@ else:
     print("CUDA is not available. Using CPU.")
 
 # Load the tokenizer and model from the local directory
-# try:
-#     tokenizer = AutoTokenizer.from_pretrained(local_dir)
-#     model = AutoModelForCausalLM.from_pretrained(local_dir)
-#     print("Model and tokenizer loaded successfully.")
-# except Exception as e:
-#     print(f"Error loading model/tokenizer: {e}")
-#     exit()
-
-if os.path.isdir(local_dir):
+try:
     print("Loading the model from the local directory")
     tokenizer = AutoTokenizer.from_pretrained(local_dir)
     model = AutoModelForCausalLM.from_pretrained(local_dir)
-else:
-    print("Downloading the model from hugging face")
+except Exception as e:
+    print(f"Error loading model/tokenizer from local directory: {e}")
+    print("Downloading the model from Hugging Face...")
     tokenizer = AutoTokenizer.from_pretrained(model_name, cache_dir="./opt-2.7B")
     model = AutoModelForCausalLM.from_pretrained(model_name, cache_dir="./opt-2.7B")
 
@@ -39,7 +33,7 @@ inputs = tokenizer(input_text, return_tensors="pt").to(device)
 
 # Generate text
 try:
-    output = model.generate(**inputs, max_length=100, num_return_sequences=1, no_repeat_ngram_size=2)
+    output = model.generate(**inputs, max_length=200, num_return_sequences=1, no_repeat_ngram_size=2, temperature=0.7, top_k=50, top_p=0.95)
     print("Text generation successful.")
 except Exception as e:
     print(f"Error during text generation: {e}")
@@ -49,4 +43,5 @@ except Exception as e:
 generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
 print("Generated text:")
 print(generated_text)
+
 
