@@ -11,3 +11,4 @@ large-gpt-2/
 offload/
 optimized-opt-2.7B-8bit/
 model-mistral-cache/
+mistral-7b-instruct-v0.2.Q5_K_M.gguf
