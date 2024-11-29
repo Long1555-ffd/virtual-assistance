@@ -1,0 +1,13 @@
+SpeechRecognition
+openai
+wikipedia
+pyttsx3
+pywhatkit
+PyAudio
+transformers
+huggingface_hub
+accelerate
+bitsandbytes
+optimum[exporters,onnxruntime]
+onnxruntime
+IPython
