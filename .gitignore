@@ -14,3 +14,7 @@ model-mistral-cache/
 mistral-7b-instruct-v0.2.Q5_K_M.gguf
 mistral-7b-openorca.Q3_K_M.gguf
 mistral-7b-openorca.Q4_0.gguf
+tmpdir_tts/
+tmpdir_vocoder/
+whisper/
+pretrained_models/

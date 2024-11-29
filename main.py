@@ -3,7 +3,6 @@ import sys
 import subprocess
 import speech_recognition as sr
 import pyttsx3
-import pywhatkit
 import wikipedia
 import time
 from datetime import datetime, timedelta
@@ -117,10 +116,8 @@ def run_sarah():
         if 'play music' in command:
             song = command.replace('play music', '')
             talk('Playing the song' + song)
-            pywhatkit.playonyt(song)
         elif 'Play a random song' in command:
             talk('Playing a random song on youtube')
-            pywhatkit.playonyt('lofi chill')
         elif 'tell me about' in command:
             person = command.replace('tell me about', '')
             info = wikipedia.summary(person, sentences=1)
