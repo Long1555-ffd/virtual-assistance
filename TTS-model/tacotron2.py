@@ -11,7 +11,7 @@ text = """Doctors are hailing a new way to treat serious asthma and chronic obst
 A trial found offering patients an injection was more effective than the current care of steroid tablets, and cuts the need for further treatment by 30%.
 The results, published in the Lancet Respiratory Medicine journal, could be transformative for millions of people with asthma and COPD around the world."""
 
-text2= """Tell me a bit about who you are and how you can assist me to be my virtual assistance?"""
+text2= """What is Artificial intelligence and is it dangerous in the future?"""
 # Running the TTS
 mel_output, mel_length, alignment = tacotron2.encode_text(text2)
 

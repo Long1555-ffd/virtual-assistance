@@ -1,18 +1,15 @@
 from gtts import gTTS
-<<<<<<< HEAD
 import os
-
-def speak_text(text):
-    tts = gTTS(text=text, lang='en', slow=False)
-    tts.save("output.mp3")
-    os.system("mpg321 output.mp3")  # Play audio (ensure mpg321 is installed)
+import pygame
+import io
+# def speak_text(text):
+#     tts = gTTS(text=text, lang='en', slow=False)
+#     tts.save("output.mp3")
+#     os.system("mpg321 output.mp3")  # Play audio (ensure mpg321 is installed)
 
 text = """There are still over 50 days left until Donald Trump takes office, but he’s already laid the ground for a trade war that could shake the global economy.
 Trump announced on Monday that he will sign an executive order placing a 25% tariff on all imports from Canada and Mexico, along with an additional 10% tariff on imports from China, in purported retaliation for drugs and migrants crossing US borders.
 """
-=======
-import pygame
-import io
 
 def speak_text(text):
     # Generate TTS and save to a memory buffer
@@ -41,5 +38,4 @@ Elise Stefanik, a Republican congresswoman of New York and Trump’s pick for US
 The home of Howard Lutnick, Trump’s choice for commerce secretary and part of his transition team, was threatened, the Bronx outlet News 12 reported. And Lee Zeldin, the Environmental Protection Agency pick, saw his Long Island home threatened, News 12 in Long Island also reported.
 
 Zeldin later posted on X saying: “A pipe bomb threat targeting me and my family at our home today was sent in with a pro-Palestinian themed message.” He said they were not at home and were trying to find out more."""
->>>>>>> fb01474b8b83aaa6a4ebb1f10cc0fa2470b1a15b
 speak_text(text)

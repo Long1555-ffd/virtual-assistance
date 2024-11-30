@@ -4,7 +4,7 @@ from bark import generate_audio, preload_models
 from transformers import pipeline
 import torch
 from scipy.io.wavfile import write
-
+import numpy as np
 # from llama_cpp import Llama
 # Define devices
 device1 = "cuda" if torch.cuda.is_available() else "cpu"
@@ -33,7 +33,7 @@ print(f"Model loaded on the {device1}")
 preload_models()  # Bark models are preloaded and cached locally
 
 # Use a lightweight LLM for reasoning
-qa_pipeline = pipeline("text2text-generation", model="google/flan-t5-base", device=0 if device == "cuda" else -1)
+qa_pipeline = pipeline("text2text-generation", model="google/flan-t5-base", device=0 if device1 == "cuda" else -1)
 
 
 # Function: Transcribe Speech (Whisper)
@@ -75,7 +75,7 @@ def run_pipeline(input_audio_path, output_audio_path):
     print(f"Audio output saved to: {output_audio_path}")
 
 # Example Usage
-if __name__ == "__main__":
-    input_audio = "example-TTS.wav"  # Path to input audio file
-    output_audio = "output.mp3"  # Path to save output audio
-    run_pipeline(input_audio, output_audio)
+input_audio = "example-TTS.wav"  # Path to input audio file
+output_audio = "output2.mp3"  # Path to save output audio
+run_pipeline(input_audio, output_audio)
+
